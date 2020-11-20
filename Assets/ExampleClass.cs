@@ -19,14 +19,19 @@ public class ExampleClass : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+               print ("one step");
                 transform.Rotate(0, -transform.rotation.x + 90, 0);
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 transform.Rotate(0,transform.rotation.x-90, 0);
             }
+        
+
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
     }
+
+  
 }
